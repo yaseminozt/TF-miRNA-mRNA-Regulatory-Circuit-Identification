@@ -1,0 +1,17 @@
+# Compiled executables
+*.exe
+*.out
+*.o
+
+# Generated intermediate/result files
+MiGene.txt
+TFGene.txt
+MiTF.txt
+TFMi.txt
+SonucMiGene.txt
+SonucMiTF.txt
+SonucTFGene.txt
+SonucTFMi.txt
+SonucMiTFGene.txt
+Sonuc.txt
+Sonuc2.txt
