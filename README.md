@@ -40,10 +40,10 @@ analysis step:
 - `TF.txt`
 - `MiRNA.txt`
 - `Gene.txt`
-- `MiGene_kontrol.txt`
-- `MiTF_kontrol.txt`
-- `TFGene_kontrol.txt`
-- `TFMi_kontrol.txt`
+- `MiGene_control.txt`
+- `MiTF_control.txt`
+- `TFGene_control.txt`
+- `TFMi_control.txt`
 
 The original programs read these files from the working directory using
 relative file names. Therefore, place the required input files in the same
@@ -68,29 +68,29 @@ lists for the corresponding pair types and writes them to:
 
 `02_identify_miRNA_gene_interactions.c`
 
-Compares `MiGene_kontrol.txt` with `MiGene.txt` and writes the overlapping
-pairs to `SonucMiGene.txt`.
+Compares `MiGene_control.txt` with `MiGene.txt` and writes the overlapping
+pairs to `ResultMiGene.txt`.
 
 ### Step 3 — Identify miRNA–TF interactions
 
 `03_identify_miRNA_TF_interactions.c`
 
-Compares `MiTF_kontrol.txt` with `MiTF.txt` and writes the overlapping pairs
-to `SonucMiTF.txt`.
+Compares `MiTF_control.txt` with `MiTF.txt` and writes the overlapping pairs
+to `ResultMiTF.txt`.
 
 ### Step 4 — Identify TF–gene interactions
 
 `04_identify_TF_gene_interactions.c`
 
-Compares `TFGene_kontrol.txt` with `TFGene.txt` and writes the overlapping
-pairs to `SonucTFGene.txt`.
+Compares `TFGene_control.txt` with `TFGene.txt` and writes the overlapping
+pairs to `ResultTFGene.txt`.
 
 ### Step 5 — Identify TF–miRNA interactions
 
 `05_identify_TF_miRNA_interactions.c`
 
-Compares `TFMi_kontrol.txt` with `TFMi.txt` and writes the overlapping pairs
-to `SonucTFMi.txt`.
+Compares `TFMi_control.txt` with `TFMi.txt` and writes the overlapping pairs
+to `ResultTFMi.txt`.
 
 ### Step 6 — Construct miRNA–TF–gene triplets
 
@@ -99,7 +99,7 @@ to `SonucTFMi.txt`.
 Integrates the identified miRNA–gene and miRNA–TF relationships and produces
 candidate miRNA–TF–gene triplets in:
 
-`SonucMiTFGene.txt`
+`ResultMiTFGene.txt`
 
 ### Step 7 — Identify TF–miRNA–gene regulatory circuits
 
@@ -108,27 +108,23 @@ candidate miRNA–TF–gene triplets in:
 Further intersects the candidate triplets with TF–gene relationships and
 writes the resulting regulatory circuits to:
 
-`Sonuc.txt`
+`Result.txt`
 
 The final refinement step uses TF–miRNA relationships to generate the final
 set of circuits in:
 
-`Sonuc2.txt`
+`Result2.txt`
 
 ## Reproducibility
 
 The source codes are provided to document the computational procedure used
-for identifying TF–miRNA–mRNA regulatory circuits. The step numbering in
-this repository corresponds to the workflow described in the associated
-Methods section.
+for identifying TF–miRNA–mRNA regulatory circuits.
 
 ## Citation
 
-If you use this code, please cite the associated publication/chapter in
+If you use this code, please cite the associated publication in
 which the workflow is described.
 
 ## License
 
-This repository is provided for research and academic use. A specific
-open-source license can be added if required by the journal, institution,
-or project.
+This repository is provided for research and academic use.
